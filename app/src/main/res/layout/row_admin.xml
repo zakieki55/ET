@@ -7,19 +7,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/namaBarange"
+        android:id="@+id/namaBarang"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:text="Nama Barang"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ukurane"
+        android:id="@+id/ukuran"
         android:text="Ukuran"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/setHargae"
+        android:id="@+id/setHarga"
         android:text="Set Harga"/>
 
 </LinearLayout>
