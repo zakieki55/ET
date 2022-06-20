@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class loginUser extends AppCompatActivity {
 
+    FloatingActionButton Btnclose1;
     Button btnLoginu, btnregistu;
     EditText txtemailu, txtpassu;
     String email, pw;
@@ -24,7 +27,17 @@ public class loginUser extends AppCompatActivity {
         btnregistu = findViewById(R.id.btnregu);
         txtemailu = findViewById(R.id.txtemail1u);
         txtpassu = findViewById(R.id.txtpassword1u);
+        Btnclose1 = findViewById(R.id.btnclose1);
 
+        Btnclose1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent b1 = new Intent(getApplicationContext(), first.class);
+
+                startActivity(b1);
+
+            }
+        });
         btnLoginu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,4 +90,5 @@ public class loginUser extends AppCompatActivity {
                 startActivity(a);
             }
         });}
+
 }

@@ -36,6 +36,7 @@ public class mainUser extends AppCompatActivity {
     private userAdapter UserAdapter;
     private ProgressDialog progressDialog;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,22 +51,14 @@ public class mainUser extends AppCompatActivity {
 
             @Override
             public void onClick(int pos) {
-                final CharSequence[] dialogItem = {"Edit", "Hapus"};
+                final CharSequence[] dialogItem = {"Batalkan Pesanan"};
                 AlertDialog.Builder dialog = new AlertDialog.Builder(mainUser.this);
                 dialog.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (i){
+
                             case 0:
-                                Intent intent = new Intent(getApplicationContext(), editorUser.class);
-                                intent.putExtra("id", list.get(pos).getId());
-                                intent.putExtra("namaBarang", list.get(pos).getNamaBarang());
-                                intent.putExtra("ukuran", list.get(pos).getUkuran());
-                                intent.putExtra("tawaran", list.get(pos).getTawaran());
-                                intent.putExtra("status", list.get(pos).getStatus());
-                                startActivity(intent);
-                                break;
-                            case 1:
                                 deleteData(list.get(pos).getId());
                                 break;
                         }
